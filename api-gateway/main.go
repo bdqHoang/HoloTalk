@@ -1,21 +1,21 @@
 package main
 
 import (
-	"api-gateway/handlers"
+	"api-gateway/config"
 	"api-gateway/middleware"
+	"api-gateway/router"
+	"log"
+
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	r := gin.Default()
+	r := router.RouterConfig()
+
+	env := config.LoadEnv()
 
 	// Add middleware logging
 	r.Use(middleware.Logging())
-
-	// define router to microservices
-	r.Any("/auth/*path", handlers.ProxyHandler("http://localhost:8081"))
-	r.Any("/user/*path", handlers.ProxyHandler("http://localhost:8082"))
-	r.Any("/chat/*path", handlers.ProxyHandler("http://localhost:8083"))
 
 	// router check connection
 	r.GET("/ping", func(c *gin.Context) {
@@ -23,6 +23,6 @@ func main() {
 			"message": "pong",
 		})
 	})
-
-	r.Run(":8080")
+	log.Println("Server running on port " + env.PORT)
+	r.Run(":" + env.PORT)
 }
