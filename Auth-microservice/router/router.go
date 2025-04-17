@@ -3,7 +3,7 @@ package router
 import (
 	"Auth-microservice/config"
 	"Auth-microservice/handlers"
-	"Auth-microservice/proto"
+	"github.com/bdqHoang/HoloTalk/shared/proto"
 	"log"
 	"net"
 	"google.golang.org/grpc"

@@ -10,6 +10,7 @@ require (
 )
 
 require (
+	github.com/bdqHoang/HoloTalk/share v0.0.0
 	github.com/bytedance/sonic v1.13.2 // indirect
 	github.com/bytedance/sonic/loader v0.2.4 // indirect
 	github.com/cloudwego/base64x v0.1.5 // indirect
@@ -38,3 +39,5 @@ require (
 	google.golang.org/protobuf v1.36.6 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/bdqHoang/HoloTalk/shared v0.0.0 => ../shared

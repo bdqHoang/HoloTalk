@@ -3,12 +3,13 @@ package handlers
 import (
 	"Auth-microservice/config"
 	"Auth-microservice/db"
-	"Auth-microservice/dto"
 	"Auth-microservice/models"
-	"Auth-microservice/proto"
 	"Auth-microservice/service"
 	"context"
 	"time"
+
+	"github.com/bdqHoang/HoloTalk/shared/dto"
+	"github.com/bdqHoang/HoloTalk/shared/proto"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
