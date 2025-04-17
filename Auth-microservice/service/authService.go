@@ -2,13 +2,13 @@ package service
 
 import (
 	"Auth-microservice/config"
-	"Auth-microservice/dto"
 	"Auth-microservice/models"
 	"errors"
 	"net/mail"
 	"regexp"
 	"time"
 
+	"github.com/bdqHoang/HoloTalk/shared/dto"
 	"github.com/golang-jwt/jwt"
 	"golang.org/x/crypto/bcrypt"
 )

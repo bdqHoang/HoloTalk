@@ -2,11 +2,11 @@ package handlers
 
 import (
 	"api-gateway/config"
-	"api-gateway/dto"
-	"api-gateway/proto"
-
-	"github.com/gin-gonic/gin"
 	"google.golang.org/grpc"
+	"github.com/gin-gonic/gin"
+	
+	"github.com/bdqHoang/HoloTalk/shared/dto"
+	"github.com/bdqHoang/HoloTalk/shared/proto"
 )
 
 var env = config.LoadEnv()
