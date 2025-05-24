@@ -5,8 +5,8 @@ import (
 
 	"gorm.io/gorm"
 
-	"Auth-microservice/models"
 	"Auth-microservice/Interface/IRepository"
+	"Auth-microservice/models"
 )
 
 type UserRepositoryImpl struct {
